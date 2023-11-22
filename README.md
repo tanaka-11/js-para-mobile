@@ -30,3 +30,13 @@ Nas bibliotecas e frameworks as sintaxes mais comuns são Arrow Fuction e Nomead
 ### Template Literal/String
 
 É a forma mais moderna de manipular dados estáticos e dinâmicos, além de permitir de uma forma mais fácil executar operações dentro de strings/códigos. Lembre-se do uso das crases e do `${}` para execuções de código dinâmico(variáveis, constantes, funções e etc).
+
+---
+
+### Módulos
+
+São uma maneira de separar lógicas/funcionalidades/dados em arquivos dedicados. Ao criar módulos é necessário utilizar os comandos `export` (no módulo a ser exportado) e `import` (no arquivo que você quer usar o módulo).
+
+Ao exportar apenas **um recurso** utilizamos o `export default nomeDoRecurso` ao exportar **mais de um** recurso, utiliza-se `export {recurso1, recurso2}`.
+
+Ao importar apenas **um recurso**, utiliza-se `import nomeDoRecurso from "local/nomeModulo"`. Ao importa **mais de um** recurso utiliza-se `import {recurso1, recurso2} from "local/nomeModulo"`
