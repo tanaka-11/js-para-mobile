@@ -25,6 +25,8 @@ Nas bibliotecas e frameworks as sintaxes mais comuns são Arrow Fuction e Nomead
 
 **Obs.** caso utilize as sintaxes anônimas ou arrow, é obrigatorio primeiro declarar a função para só depois executa-la.
 
+---
+
 ### Template Literal/String
 
 É a forma mais moderna de manipular dados estáticos e dinâmicos, além de permitir de uma forma mais fácil executar operações dentro de strings/códigos. Lembre-se do uso das crases e do `${}` para execuções de código dinâmico(variáveis, constantes, funções e etc).
