@@ -25,3 +25,11 @@ const descontos = cursos.map(curso => curso.preco - curso.preco * 0.10);
 console.log('---');
 console.log('Exercicio 1');
 console.log(descontos);
+
+// Desafio manter o array completo apenas modificando os preços com o desconto
+console.log('---');
+console.log('Desafio!');
+const novosDados = cursos.map(curso => {
+    return {...curso, preco: curso.preco - curso.preco * 0.10};
+});
+console.log(novosDados);
