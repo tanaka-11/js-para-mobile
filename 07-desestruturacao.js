@@ -1,5 +1,6 @@
 // Destructuring(Desestruturação) - Extrair dados de um array para variáveis/constantes individuais
 
+// DESESTRUTURAÇÃO EM ARRAYS
 // Exemplo 1 de destructuring em arrays
 const alunas = ['Tanaka', 'Zimbo', 'Melissa'];
 const [tanaka, zimbo, melissa] = alunas;
@@ -41,7 +42,7 @@ console.log('---');
 console.log('Exemplo 4');
 // console.log(recursos); // Matriz completa
 console.log(produtos[1]); // Acessando pela constante gerada pela desestruturação
-console.log('---');
+console.log('--');
 
 // Acessando os dados da desestruturação atraves de um loop
 for(const produto of produtos){
@@ -49,7 +50,58 @@ for(const produto of produtos){
 }
 
 // Acessando os dados da função com a desestruturação 
-console.log('---');
+console.log('--');
 console.log(converter('tanaka'));
 console.log(converter('celular'));
 console.log(converter(produtos[1]));
+
+
+// DESESTRUTURAÇÃO EM OBJETOS
+// Exemplo 1 destructuring em objetos
+const pessoa = {
+    nome: 'Tanaka',
+    idade: 22,
+    bairro: 'Vila Prudente',
+    situacao: 'Apaixonada'
+};
+// Diferentemente do array para desestruturação de objetos é obrigatorio o nome da propriedade ser o mesmo
+const { nome, idade, bairro, situacao } = pessoa;
+
+console.log('---');
+console.log('Exemplo 5');
+console.log(`A aluna ${nome} está ${situacao}.`);
+console.log(`Mora na ${bairro} e tem ${idade} anos.`);
+
+// Exemplo 2 destructuring em objetos - Neste caso fizemos o objeto de maneira direta e vamos utilizar o apelido(Passamos o nome que queremos dar juntamente com ':' depois do nome original) para não precisar passar o mesmo nome da propriedade
+const {codigo : pedido, cursos, preco} = {
+    codigo: '123abc', cursos: ['Figma', 'Node.JS'], preco: 1000
+};
+
+console.log('---');
+console.log('Exemplo 6');
+console.log(pedido);
+console.log(cursos[0]);
+console.log(preco);
+
+// DESESTRUTURAÇÃO EM FUNÇÕES
+// Exemplo 1 de destructuring para parâmetros de função
+console.log('---');
+console.log('Exemplo 7');
+
+function exibirDados(objeto){
+    console.log(`Filme: ${objeto.titulo} - Ano Lançamento: ${objeto.ano}`);
+};
+
+// Objetos para exemplo 
+const filme1 = {
+    titulo: 'Vingadores',
+    ano: 2012
+};
+const filme2 = {
+    titulo: 'Barbie',
+    ano: 2023
+};
+
+// Exibindo dados
+exibirDados(filme1);
+exibirDados(filme2);
