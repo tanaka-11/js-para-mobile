@@ -1,4 +1,4 @@
-// ...rest - Com ele conseguimos mesclar uma lista de parâmetros/argumentos para uma função
+// ...rest(coletar/extrair valores) - Com ele conseguimos mesclar uma lista de parâmetros/argumentos para uma função
 
 // Arrays de exemplo 
 const cientistas = [
@@ -17,9 +17,7 @@ const artistas = [
 ];
 
 // Função com a sintaxe de arrow fuction, operador rest e com a palavra-chave sort que serve para organização 
-const classificar = (...parametros) => {
-    return parametros.sort();
-};
+const classificar = (...parametros) => parametros.sort();
 
 // Chamada da função com o operador rest
 console.log(classificar(...cientistas)); // Spread

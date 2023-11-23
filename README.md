@@ -40,3 +40,11 @@ São uma maneira de separar lógicas/funcionalidades/dados em arquivos dedicados
 Ao exportar apenas **um recurso** utilizamos o `export default nomeDoRecurso` ao exportar **mais de um** recurso, utiliza-se `export {recurso1, recurso2}`.
 
 Ao importar apenas **um recurso**, utiliza-se `import nomeDoRecurso from "./local/nomeModulo"`. Ao importa **mais de um** recurso utiliza-se `import {recurso1, recurso2} from "./local/nomeModulo"`
+
+---
+
+### Operadores Spread e Rest
+
+Utilizamos o operador `...` para ambos casos tendo diferenças na forma de utilizar. No **spread** utilizamos para copiar elementos/dados de um array/objeto para dentro de outro array/objeto. Ele é útil para gerar novas estruturas de dados a partir de estruturas já existentes.
+ 
+ Já com o **rest** , usamos para gerar uma lista de parâmetros para uma função à partir dos valores de um array,utilizado para manipular dados de um array sem a nescessidade de criar um loop. Ele é útil para evitar a necessidade de criar parâmetros manualmente em uma função, ou para quando não sabemos quando parâmetros serão necessários
