@@ -48,3 +48,9 @@ Ao importar apenas **um recurso**, utiliza-se `import nomeDoRecurso from "./loca
 Utilizamos o operador `...` para ambos casos tendo diferenças na forma de utilizar. No **spread** utilizamos para copiar elementos/dados de um array/objeto para dentro de outro array/objeto. Ele é útil para gerar novas estruturas de dados a partir de estruturas já existentes.
  
  Já com o **rest** , usamos para gerar uma lista de parâmetros para uma função à partir dos valores de um array,utilizado para manipular dados de um array sem a nescessidade de criar um loop. Ele é útil para evitar a necessidade de criar parâmetros manualmente em uma função, ou para quando não sabemos quando parâmetros serão necessários
+
+---
+
+### Destructuring(Desestruturação)
+
+Técnica para extrair valores de arrays e objetos para novas variáveis/constantes. Usada para simplificar o acesso a estes dados, podendo ser aplicada também em parâmetros de funções.
