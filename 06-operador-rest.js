@@ -16,7 +16,7 @@ const artistas = [
     'Tanaka'
 ];
 
-// Função com a sintaxe de arrow fuction, operador rest e com a palavra-chave sort que serve para organização 
+// Função com a sintaxe de arrow fuction, operador rest e com a função(método) sort que serve para organização 
 const classificar = (...parametros) => parametros.sort();
 
 // Chamada da função com o operador rest
