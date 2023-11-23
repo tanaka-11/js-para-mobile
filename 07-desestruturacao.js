@@ -88,8 +88,9 @@ console.log(preco);
 console.log('---');
 console.log('Exemplo 7');
 
-function exibirDados(objeto){
-    console.log(`Filme: ${objeto.titulo} - Ano Lançamento: ${objeto.ano}`);
+// Neste caso desestruturamos diretamente na função com as chaves e capturando as propriedades nescessarias
+function exibirDados({titulo, ano}){
+    console.log(`Filme: ${titulo} - Ano Lançamento: ${ano}`);
 };
 
 // Objetos para exemplo 
@@ -102,6 +103,6 @@ const filme2 = {
     ano: 2023
 };
 
-// Exibindo dados
+// Exibindo dados da função
 exibirDados(filme1);
 exibirDados(filme2);
