@@ -68,9 +68,15 @@ console.log('Exercicio 1');
 console.log(cursosCategoria);
 
 // Desafio ! - Gerar um novo array so com os titulos dos cursos de 'Mobile'
-// Neste desafio utilizamos filter e map para encadear passando primeiro o filtro para categoria e mapeando pelo titulo
+// Neste desafio utilizamos metodos de encadeamento com filter(para filtrar a categoria) e map(para extrair o titulo)
 const cursosTitulo = cursos.filter(curso => curso.categoria == 'Mobile').map(curso => curso.titulo);
+
+// Versão sem encadeamento
+const categoria = cursos.filter(curso => curso.categoria == 'Mobile');
+const titulo = categoria.map(curso => curso.titulo);
 
 console.log('---');
 console.log('Desafio');
 console.log(cursosTitulo);
+console.log('--');
+console.log(titulo);
