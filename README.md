@@ -55,8 +55,11 @@ Utilizamos o operador `...` para ambos casos tendo diferenças na forma de utili
 
 Técnica para extrair valores de arrays e objetos para novas variáveis/constantes. Usada para simplificar o acesso a estes dados, podendo ser aplicada também em parâmetros de funções.
 
-### Métodos de manipulação de arrays
+### Métodos de manipulação de arrays: map, filter e reduce
+São metodos que permitem realizar operações diversas em elementos de arrays. Funcionam como `loops` especiais, executando uma função `callback` para cada elemento dentro do array.
 
-- Map: método de transformar em outra coisa, em resumo ele passa por elementos de um array e realiza operações em cada um deles através de uma função(normalmente sendo uma arrow fuction por ser menos verboso e chamada de callback) gerando um outro array.
+- Map: Método que percorre os elementos do array e **executa uma transformação**, gerando um novo array de dados.
 
-- Filter : método de filtrar dados de um array, ele também passa por elementos de um array (usando uma função callback) e retorna valores de acordo com uma ou mais condições gerando um novo array.
+- Filter : Método de **filtrar dados de um array** de acordo com uma ou mais condições, gerando um novo array de dados.
+
+- Reduce : Método que **realiza operações** (soma, multiplicação, concatenação e etc), gerando um **ÚNICO** resultado.
