@@ -1,6 +1,5 @@
 import cursos from "./modulos/cursos.js";
 
-
 // Método Reduce(reduzir) - Ele em resumo passa por elementos de um array igualmente aos outros metodos (usando uma função callback com parâmetros, e um parâmetro com valor inicial) e retorna um único valor/resultado. Pode ser útil para operações matmáticas que geram um único resultado.
 
 // Exemplo 1 Somando valores com reduce - Passamos primeiro um parametro de valores( recebendo o acumulador e o valor inicial) e como se trata de um acumulador precisamos colocar (, 0) apos a função ou (, 1) dependendo da operação matematica a ser feita.
