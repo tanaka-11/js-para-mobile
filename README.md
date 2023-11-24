@@ -58,3 +58,5 @@ Técnica para extrair valores de arrays e objetos para novas variáveis/constant
 ### Métodos de manipulação de arrays
 
 - Map: método de transformar em outra coisa, em resumo ele passa por elementos de um array e realiza operações em cada um deles através de uma função(normalmente sendo uma arrow fuction por ser menos verboso e chamada de callback) gerando um outro array.
+
+- Filter : método de filtrar dados de um array, ele também passa por elementos de um array (usando uma função callback) e retorna valores de acordo com uma ou mais condições gerando um novo array.

@@ -1,3 +1,6 @@
+// Importando banco de dados de exemplo
+import cursos from "./modulos/cursos.js";
+
 // Método Filter(filtrar) - Em resumo ele também passa por elementos de um array (usando uma função callback) e retorna valores de acordo com uma ou mais condições gerando um novo array.
 
 // Exemplo 1 - Nesse exemplo vamos gerar um array com os valores que bateram a meta
@@ -31,4 +34,29 @@ const resultados = alunos.filter(aluno => aluno.startsWith('M') && aluno.endsWit
 console.log('---');
 console.log('Exemplo 2');
 console.log(alunos);
+console.log('--');
 console.log(resultados);
+
+// Exemplo 3 - Vamos filtrar os dados de categoria onde so filtre os cursos de design
+const cursosDesign = cursos.filter( curso => curso.categoria === 'Design');
+console.log('---');
+console.log('Exemplo 3');
+console.log(cursos);
+console.log('--');
+console.log(cursosDesign);
+
+// Exemplo 4 - Vamos filtrar os dados de categoria que não sejam de "design"
+const cursosMenosDesign = cursos.filter(curso => curso.categoria != 'Design');
+console.log('---');
+console.log('Exemplo 4');
+console.log(cursosMenosDesign);
+
+// Exercicio 1 - Gere um novo array com os cursos que atendam os seguintes critérios: 
+// Categoria - Front-End e Mobile
+// Preços - Acima de 600
+
+const cursosCategoria = cursos.filter((curso) => curso.preco > 600 && curso.categoria == 'Front-End' || curso.categoria == 'Mobile');
+
+console.log('---');
+console.log('Exercicio 1');
+console.log(cursosCategoria);
