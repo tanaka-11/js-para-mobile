@@ -17,9 +17,9 @@
 
 Blocos de código reaproveitáveis que podem ser criados de pelo menos 3 formas:
 
-- Função Anônima
-- Função Nomeada/Declarada
-- Arrow Fuction
+- Função Anônima: Não precisa de um nome
+- Função Nomeada/Declarada: Recebe nome
+- Arrow Fuction: () => {}
 
 Nas bibliotecas e frameworks as sintaxes mais comuns são Arrow Fuction e Nomeada.
 
@@ -54,3 +54,7 @@ Utilizamos o operador `...` para ambos casos tendo diferenças na forma de utili
 ### Destructuring(Desestruturação)
 
 Técnica para extrair valores de arrays e objetos para novas variáveis/constantes. Usada para simplificar o acesso a estes dados, podendo ser aplicada também em parâmetros de funções.
+
+### Métodos de manipulação de arrays
+
+- Map: método de transformar em outra coisa, em resumo ele passa por elementos de um array e realiza operações em cada um deles através de uma função(normalmente sendo uma arrow fuction por ser menos verboso e chamada de callback) gerando um outro array.
