@@ -55,6 +55,12 @@ console.log(cursosMenosDesign);
 // Categoria - Front-End e Mobile
 // Preços - Acima de 600
 
+// Versão 1 - Como passamos primeiro o || tivemos que adicionar parentes para trata-lo como prioridade
+// const cursosCategoria = cursos.filter((curso) => {
+//     return (curso.categoria == 'Front-End' || curso.categoria == 'Mobile') && curso.preco > 600
+// });
+
+// Versão 2 - Passando diretamente o && como prioridade
 const cursosCategoria = cursos.filter((curso) => curso.preco > 600 && curso.categoria == 'Front-End' || curso.categoria == 'Mobile');
 
 console.log('---');
