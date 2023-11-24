@@ -29,7 +29,16 @@ console.log(descontos);
 // Desafio manter o array completo apenas modificando os preços com o desconto
 console.log('---');
 console.log('Desafio!');
+
+// 1º versão da resolução do desafio com a sintaxe completa
 const novosDados = cursos.map(curso => {
     return {...curso, preco: curso.preco - curso.preco * 0.10};
 });
 console.log(novosDados);
+
+// 2º versão tiramos as chaves de fora e o return e adicionamos parenteses no bloco
+const blackfriday = cursos.map(curso => 
+    ({...curso, preco: curso.preco - curso.preco * 0.10})
+);
+console.log('--');
+console.log(blackfriday);
