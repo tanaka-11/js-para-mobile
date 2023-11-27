@@ -15,7 +15,7 @@ console.log(numerosDobrados);
 console.log('---');
 console.log('Exemplo 2');
 console.log(cursos);
-
+console.log('--');
 const titulos = cursos.map(curso => curso.titulo );
 console.log(titulos);
 
