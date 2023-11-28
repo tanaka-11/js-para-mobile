@@ -10,15 +10,18 @@ botao.addEventListener("click", async function(){
         const dados = await resposta.json();
         
         if(divUsuarios.innerHTML == ""){
-            dados.filter( ({name}) => name.startsWith("C") )
+            dados
+            .filter( ({name}) => name.startsWith("C") )
             .map( ({name, email, website}) => {
                 let secao = document.createElement("section");
+
                 secao.innerHTML = `
                     <h2>${name}</h2>
                     <p>${email}</p>
                     <p>${website}</p>
                     <hr>
                 `;
+                
                 divUsuarios.appendChild(secao);
             })
         }
