@@ -28,7 +28,7 @@
 
                 const photoList = document.getElementById('photo-list');
 
-                // Itera sobre a lista de usuários e cria elementos <li> para cada um (Não utilizar o loop foreach por poder gerar diferenças com o array original). Neste caso então utilizamos o map e desestruturamos a const dados.
+                // Não utilizar o loop foreach por poder gerar diferenças com o array original. Neste caso então utilizamos o map, desestruturamos a const dados e filtramos onde o id das imagens não passe de 10.
                 dados
                 .filter( (({id}) => id <= 10) )
                 .map(({id, title, thumbnailUrl}) => {
