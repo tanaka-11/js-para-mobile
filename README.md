@@ -62,6 +62,14 @@ São metodos que permitem realizar operações diversas em elementos de arrays. 
 
 - Map: Método que percorre os elementos do array e **executa uma transformação**, gerando um novo array de dados.
 
-- Filter : Método de **filtrar dados de um array** de acordo com uma ou mais condições, gerando um novo array de dados.
+- Filter: Método de **filtrar dados de um array** de acordo com uma ou mais condições, gerando um novo array de dados.
 
-- Reduce : Método que **realiza operações** (soma, multiplicação, concatenação e etc), gerando um **ÚNICO** resultado.
+- Reduce: Método que **realiza operações** (soma, multiplicação, concatenação e etc), gerando um **ÚNICO** resultado.
+
+---
+
+### Comunicação assíncrona
+
+No JavaScript morderno utilizamos para comunicação assíncrona com APIs REST o comando `fetch`.
+
+Você pode usar o `fetch` como **Promises** (recursos assíncronos) encadeado com as funções `.then` e `.catch` (para tratamento de erros genéricos), ou usando a sintaxe `async/await` através de funções
