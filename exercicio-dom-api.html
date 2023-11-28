@@ -12,6 +12,7 @@
     <ul id="user-list"></ul>
 
     <script>
+    // Versão 1 - Utilizando script in page
     function carregar(){
         async function fetchUsers() {
             try {
@@ -22,8 +23,8 @@
                 // Obtém a referência ao elemento <ul> no DOM
                 const userList = document.getElementById('user-list');
 
-                // Itera sobre a lista de usuários e cria elementos <li> para cada um
-                usuario.forEach(user => {
+                // Itera sobre a lista de usuários e cria elementos <li> para cada um (Não utilizar o loop foreach por poder gerar diferenças com o array original). Neste caso então utilizamos o map.
+                usuario.map(user => {
                     const li = document.createElement('li');
 
                     li.innerHTML = `Nome: ${user.name} Email: ${user.email}`;
