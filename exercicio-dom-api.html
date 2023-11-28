@@ -4,40 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio DOM com API</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Dados de User</h1>
+    <h1>Dados de Fotos</h1>
     <input type="button" value="Carregar" id="carregaDados" onclick="carregar()"> 
 
-    <ul id="user-list"></ul>
+    <div id="photo-list"></div>
 
     <script>
     // Versão 1 - Utilizando script in page
     function carregar(){
-        async function fetchUsers() {
+        async function dadosAPI() {
             try {
                 // Faz uma requisição à API JSONPlaceholder para obter a lista de usuários
-                const resposta = await fetch('https://jsonplaceholder.typicode.com/users');
-                const usuario = await resposta.json();
+                const resposta = await fetch('https://jsonplaceholder.typicode.com/photos');
+                const dados = await resposta.json();
 
-                // Obtém a referência ao elemento <ul> no DOM
-                const userList = document.getElementById('user-list');
+                const photoList = document.getElementById('photo-list');
 
-                // Itera sobre a lista de usuários e cria elementos <li> para cada um (Não utilizar o loop foreach por poder gerar diferenças com o array original). Neste caso então utilizamos o map.
-                usuario.map(user => {
-                    const li = document.createElement('li');
+                // Itera sobre a lista de usuários e cria elementos <li> para cada um (Não utilizar o loop foreach por poder gerar diferenças com o array original). Neste caso então utilizamos o map e desestruturamos a const dados.
+                dados
+                .filter( (({id}) => id <= 10) )
+                .map(({id, title, thumbnailUrl}) => {
+                    const secao = document.createElement('section');
 
-                    li.innerHTML = `Nome: ${user.name} Email: ${user.email}`;
+                    secao.innerHTML = `
+                    <h3>Titulo: ${title}</h3>
+                    <h4>ID: ${id} </h4> 
+                    <img src="${thumbnailUrl}" alt="Imagem"></img>
+                    <hr> 
+                    `;
 
-                    userList.appendChild(li);
+                    photoList.appendChild(secao);
                 });
             } catch (error) {
                 console.error('Erro ao buscar usuários:', error);
             }
         }
-
         // Chama a função para buscar e exibir usuários quando a página carregar
-        fetchUsers();
+        dadosAPI();
     }
     </script>
 </body>
