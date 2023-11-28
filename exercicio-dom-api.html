@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio DOM com API</title>
+</head>
+<body>
+    <h1>Dados de User</h1>
+    <input type="button" value="Carregar" id="carregaDados" onclick="carregar()"> 
+
+    <ul id="user-list"></ul>
+
+    <script>
+    function carregar(){
+        async function fetchUsers() {
+            try {
+                // Faz uma requisição à API JSONPlaceholder para obter a lista de usuários
+                const resposta = await fetch('https://jsonplaceholder.typicode.com/users');
+                const usuario = await resposta.json();
+
+                // Obtém a referência ao elemento <ul> no DOM
+                const userList = document.getElementById('user-list');
+
+                // Itera sobre a lista de usuários e cria elementos <li> para cada um
+                usuario.forEach(user => {
+                    const li = document.createElement('li');
+
+                    li.innerHTML = `Nome: ${user.name} Email: ${user.email}`;
+
+                    userList.appendChild(li);
+                });
+            } catch (error) {
+                console.error('Erro ao buscar usuários:', error);
+            }
+        }
+
+        // Chama a função para buscar e exibir usuários quando a página carregar
+        fetchUsers();
+    }
+    </script>
+</body>
+</html>
