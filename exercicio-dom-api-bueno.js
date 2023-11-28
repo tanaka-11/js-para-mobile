@@ -1,6 +1,5 @@
 const apiUrl = `https://jsonplaceholder.typicode.com/users`;
 
-// Versão 2 diretamente do js
 function carregarDados(){ 
     function acessaAPI() {
         fetch(apiUrl)
