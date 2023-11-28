@@ -21,7 +21,6 @@ botao.addEventListener("click", async function(){
                 divUsuarios.appendChild(secao);
             }
         }
-
     } catch (error) {
         console.error(error.message);
     }
