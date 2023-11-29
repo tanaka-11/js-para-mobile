@@ -37,14 +37,14 @@
                     secao.innerHTML = `
                     <h3>ID: ${id} </h3> 
                     <h4>Titulo: ${title}</h4>
-                    <img src="${thumbnailUrl}" alt="Imagem"></img>
+                    <img src="${thumbnailUrl}" alt="Imagem">
                     <hr> 
                     `;
 
                     photoList.appendChild(secao);
                 });
             } catch (error) {
-                console.error('Erro ao buscar usuários:', error);
+                console.error('Erro ao buscar fotos:', error);
             }
         }
         // Chama a função para buscar e exibir usuários quando a página carregar
